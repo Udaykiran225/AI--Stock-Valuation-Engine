@@ -33,6 +33,7 @@ STOCK_AI/
 ├── .gitignore                      # Configuration file tracking repository exclusion rules
 ├── README.md                       # Comprehensive platform deployment documentation
 └── requirements.txt                # Fixed framework dependencies manifest file
+'''text
 
 🏗️ System Architecture & Data Flow
 The application is engineered using a decoupled, modular microservices layout to ensure clean separation of concerns:
