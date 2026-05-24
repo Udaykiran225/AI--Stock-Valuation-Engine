@@ -2,6 +2,39 @@
 
 AlphaEngine is an enterprise-grade, full-stack microservices application that orchestrates an automated ETL (Extract, Transform, Load) data pipeline. It ingests live equity profiles from market data networks and executes a multi-threaded hybrid Machine Learning pipeline (XGBoost Classifier + FinBERT NLP Neural Network Transformer) to evaluate structural balance sheet safety index limits alongside active textual market news sentiment.
 
+## 📁 Project Directory Structure
+
+The repository is organized following industry-standard design patterns, cleanly separating frontend presentation, backend routing logic, and data engineering layers:
+
+```text
+STOCK_AI/
+├── backend/
+│   └── app/
+│       ├── api/
+│       │   └── stocks.py           # Sub-routed stock intelligence endpoint logic
+│       ├── services/
+│       │   ├── analyzer.py         # Programmatic fundamental risk grading matrix
+│       │   └── pipeline.py         # ETL pipeline controller (Scrape -> ML -> Cache)
+│       ├── database.py             # SQLite data warehouse connection & table initialization
+│       ├── main.py                 # FastAPI system core application gateway
+│       ├── models.py               # Rigid data property cache mapping schema
+│       └── schemas.py              # Pydantic JSON contract data enforcement layers
+├── frontend/
+│   ├── components/
+│   │   └── utils.py                # Contextual UI warning alert visual components
+│   └── app.py                      # Streamlit graphical analytics dashboard interface
+├── ml_core/
+│   ├── models/
+│   │   ├── finbert_config/         # FinBERT local caching parameters
+│   │   └── xgboost_health_model.pkl # Offline-trained operational classifier binary
+│   ├── inference_nlp.py            # Real-time text scraping and transformer scoring
+│   └── train_classifier.py         # XGBoost model fitting and fundamental scoring math
+├── tests/
+│   └── test_pipeline.py            # Automated Unit testing validation suite
+├── .gitignore                      # Configuration file tracking repository exclusion rules
+├── README.md                       # Comprehensive platform deployment documentation
+└── requirements.txt                # Fixed framework dependencies manifest file
+
 ## 🏗️ System Architecture & Data Flow
 
 The application is engineered using a decoupled, modular microservices layout to ensure clean separation of concerns:
