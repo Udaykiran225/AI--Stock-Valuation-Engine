@@ -6,7 +6,6 @@ AlphaEngine is an enterprise-grade, full-stack microservices application that or
 
 The repository is organized following industry-standard design patterns, cleanly separating frontend presentation, backend routing logic, and data engineering layers:
 
-```text
 STOCK_AI/
 ├── backend/
 │   └── app/
