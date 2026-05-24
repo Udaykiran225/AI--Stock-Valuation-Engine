@@ -35,33 +35,24 @@ STOCK_AI/
 ├── README.md                       # Comprehensive platform deployment documentation
 └── requirements.txt                # Fixed framework dependencies manifest file
 
-## 🏗️ System Architecture & Data Flow
-
+🏗️ System Architecture & Data Flow
 The application is engineered using a decoupled, modular microservices layout to ensure clean separation of concerns:
-
-- **Frontend Interface Panel (`frontend/`):** A responsive Streamlit dashboard configured with clean custom CSS layout modules, grid-stat containers, and real-time interactive multi-threaded data visualizations using Plotly.
-- **API Gatekeeper Gateway (`backend/app/main.py`):** A high-performance FastAPI core routing requests dynamically through specialized sub-routers (`api/stocks.py`).
-- **Data Orchestration Pipeline (`services/pipeline.py`):** A structured data controller handling the full lifecycle of data validation via Pydantic (`schemas.py`), internal struct mapping (`models.py`), and analytics processing (`services/analyzer.py`).
-- **Persistence Storage Cache (`backend/data/`):** A localized SQLite database cache designed to eliminate redundant network latency and protect against web rate-limiting by instantly handling warehouse cache hits.
-- **Machine Learning Layer (`ml_core/`):** - **Quantitative:** An offline-compiled binary XGBoost tree model checking equity multipliers.
-  - **Qualitative:** A deep-learning FinBERT text transformer mapping real-time RSS semantic trends.
-
----
-
-## 🚀 Local Installation & Deployment Guide
-
+•	Frontend Interface Panel (frontend/): A responsive Streamlit dashboard configured with clean custom CSS layout modules, grid-stat containers, and real-time interactive multi-threaded data visualizations using Plotly.
+•	API Gatekeeper Gateway (backend/app/main.py): A high-performance FastAPI core routing requests dynamically through specialized sub-routers (api/stocks.py).
+•	Data Orchestration Pipeline (services/pipeline.py): A structured data controller handling the full lifecycle of data validation via Pydantic (schemas.py), internal struct mapping (models.py), and analytics processing (services/analyzer.py).
+•	Persistence Storage Cache (backend/data/): A localized SQLite database cache designed to eliminate redundant network latency and protect against web rate-limiting by instantly handling warehouse cache hits.
+•	Machine Learning Layer (ml_core/): - Quantitative: An offline-compiled binary XGBoost tree model checking equity multipliers.
+•	Qualitative: A deep-learning FinBERT text transformer mapping real-time RSS semantic trends.
+🚀 Local Installation & Deployment Guide
 Follow these sequential steps to initialize, test, and deploy the entire platform ecosystem locally on your machine:
-
-### 1. Environment Synchronization
+1. Environment Synchronization
 Clone this repository to your local system workspace, initialize a Python virtual environment, and install the compiled requirements tracking list:
-```bash
 # Initialize and activate the virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
 # Install synchronized project dependencies
 pip install -r requirements.txt
-
 2. Database & Module Initialization
 Run the initialization scripts to generate the tracking data arrays and establish your local SQL warehouse caching tables:
 # Compile and train the local binary classification model
@@ -106,10 +97,15 @@ The backend validation engine enforces explicit JSON API data contracts via Pyda
 •	Asynchronous Routing Gateway: FastAPI, Uvicorn Server Core, Pydantic v2
 •	Data Engineering Warehouse: SQLite3, Structured Query Language Modules, YFinance
 •	Machine Learning Frameworks: Core PyTorch Model Weights, XGBoost Classifier, Scikit-Learn Ecosystem, HuggingFace Transformers
-### Next step to push this to GitHub:
-1. Save this updated text into your `README.md` file using **`Cmd + S`**.
-2. Go down to your VS Code terminal, add the changes, and push them to your repo by typing:
-   ```bash
-   git add README.md
-   git commit -m "docs: add complete production-grade README file"
-   git push origin main
+
+---
+
+### Push the Updated Repository to GitHub
+
+Save the file (`Cmd + S`) and run these three quick commands in your terminal to sync the file structure straight up to your live profile:
+
+```bash
+git add README.md
+git commit -m "docs: add structural project directory map to README"
+git push origin main
+
